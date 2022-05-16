@@ -1,90 +1,97 @@
 import React from "react";
 import styled from "styled-components";
 import { BsPatchCheckFill } from "react-icons/bs";
+import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
 
 const Experience = () => {
   return (
     <section id="experience">
-      <h5>What Skills I Have</h5>
-      <h2>My Experience</h2>
+      <Flip left>
+        <h5>What Skills I Have</h5>
+        <h2>My Experience</h2>
+      </Flip>
 
       <ExperienceContainer className="container">
         {/* Frontend Development */}
-        <ExperienceFrontend>
-          <h3>Frontend Development</h3>
-          <ExperienceContent>
-            <ExperienceDetails>
-              <BsPatchCheckFill />
-              <div>
-                <h4>HTML</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </ExperienceDetails>
-            <ExperienceDetails>
-              <BsPatchCheckFill />
-              <div>
-                <h4>CSS</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </ExperienceDetails>
-            <ExperienceDetails>
-              <BsPatchCheckFill />
-              <div>
-                <h4>JavaScript</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </ExperienceDetails>
-            <ExperienceDetails>
-              <BsPatchCheckFill />
-              <div>
-                <h4>Bootstrap</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </ExperienceDetails>
-            <ExperienceDetails>
-              <BsPatchCheckFill />
-              <div>
-                <h4>React</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </ExperienceDetails>
-          </ExperienceContent>
-        </ExperienceFrontend>
-
-        {/* Backend Development */}
-        <ExperienceBackend>
-          <h3>Backend Development</h3>
-          <ExperienceContent>
-            <ExperienceDetails>
-              <BsPatchCheckFill />
-              <div>
-                <h4>PHP</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </ExperienceDetails>
-            <ExperienceDetails>
-              <BsPatchCheckFill />
-              <div>
-                <h4>Node Js</h4>
-                <small className="text-light">Basic</small>
-              </div>
-            </ExperienceDetails>
-            <ExperienceDetails>
-              <BsPatchCheckFill />
-              <div>
-                <h4>MySQL</h4>
-                <small className="text-light">Basic</small>
-              </div>
-            </ExperienceDetails>
-            <ExperienceDetails>
-              <BsPatchCheckFill />
-              <div>
-                <h4>Solidity</h4>
-                <small className="text-light">Basic</small>
-              </div>
-            </ExperienceDetails>
-          </ExperienceContent>
-        </ExperienceBackend>
+        <Fade right>
+          <ExperienceFrontend>
+            <h3>Frontend Development</h3>
+            <ExperienceContent>
+              <ExperienceDetails>
+                <BsPatchCheckFill />
+                <div>
+                  <h4>HTML</h4>
+                  <small className="text-light">Experienced</small>
+                </div>
+              </ExperienceDetails>
+              <ExperienceDetails>
+                <BsPatchCheckFill />
+                <div>
+                  <h4>CSS</h4>
+                  <small className="text-light">Experienced</small>
+                </div>
+              </ExperienceDetails>
+              <ExperienceDetails>
+                <BsPatchCheckFill />
+                <div>
+                  <h4>JavaScript</h4>
+                  <small className="text-light">Experienced</small>
+                </div>
+              </ExperienceDetails>
+              <ExperienceDetails>
+                <BsPatchCheckFill />
+                <div>
+                  <h4>Bootstrap</h4>
+                  <small className="text-light">Experienced</small>
+                </div>
+              </ExperienceDetails>
+              <ExperienceDetails>
+                <BsPatchCheckFill />
+                <div>
+                  <h4>React</h4>
+                  <small className="text-light">Experienced</small>
+                </div>
+              </ExperienceDetails>
+            </ExperienceContent>
+          </ExperienceFrontend>
+        </Fade>
+        <Fade right delay={400}>
+          {/* Backend Development */}
+          <ExperienceBackend>
+            <h3>Backend Development</h3>
+            <ExperienceContent>
+              <ExperienceDetails>
+                <BsPatchCheckFill />
+                <div>
+                  <h4>PHP</h4>
+                  <small className="text-light">Experienced</small>
+                </div>
+              </ExperienceDetails>
+              <ExperienceDetails>
+                <BsPatchCheckFill />
+                <div>
+                  <h4>Node Js</h4>
+                  <small className="text-light">Basic</small>
+                </div>
+              </ExperienceDetails>
+              <ExperienceDetails>
+                <BsPatchCheckFill />
+                <div>
+                  <h4>MySQL</h4>
+                  <small className="text-light">Basic</small>
+                </div>
+              </ExperienceDetails>
+              <ExperienceDetails>
+                <BsPatchCheckFill />
+                <div>
+                  <h4>Solidity</h4>
+                  <small className="text-light">Basic</small>
+                </div>
+              </ExperienceDetails>
+            </ExperienceContent>
+          </ExperienceBackend>
+        </Fade>
       </ExperienceContainer>
     </section>
   );

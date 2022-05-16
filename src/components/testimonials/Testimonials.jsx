@@ -5,6 +5,8 @@ import AVATAR2 from "../../assets/avatar2.jpg";
 import AVATAR3 from "../../assets/avatar3.jpg";
 import AVATAR4 from "../../assets/avatar4.jpg";
 import { Pagination } from "swiper";
+import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -42,33 +44,37 @@ const data = [
 const Testimonials = () => {
   return (
     <section id="testimonials">
-      <h5>Review from clients</h5>
-      <h2>Testimonials</h2>
+      <Flip left>
+        <h5>Review from clients</h5>
+        <h2>Testimonials</h2>
+      </Flip>
 
-      <TestimonialsContainer className="container">
-        <Swiper
-          // install Swiper modules
-          modules={[Pagination]}
-          spaceBetween={40}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-        >
-          {data.map((data, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <Testimonial>
-                  <div>
-                    <img src={data.avatar} alt="Avatar" />
-                  </div>
-                  <h5>{data.name}</h5>
-                  <small>{data.review}</small>
-                </Testimonial>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </TestimonialsContainer>
+      <Fade bottom>
+        <TestimonialsContainer className="container">
+          <Swiper
+            // install Swiper modules
+            modules={[Pagination]}
+            spaceBetween={40}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+          >
+            {data.map((data, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <Testimonial>
+                    <div>
+                      <img src={data.avatar} alt="Avatar" />
+                    </div>
+                    <h5>{data.name}</h5>
+                    <small>{data.review}</small>
+                  </Testimonial>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </TestimonialsContainer>
+      </Fade>
     </section>
   );
 };

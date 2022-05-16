@@ -32,13 +32,19 @@ const Footer = () => {
       </Permalinks>
 
       <Socials>
-        <a href="https://www.facebook.com/weijia.leong/">
+        <a href="https://www.facebook.com/weijia.leong/" target="_blank">
           <FaFacebookF />
         </a>
-        <a href="https://steamcommunity.com/profiles/76561198365451053/">
+        <a
+          href="https://steamcommunity.com/profiles/76561198365451053/"
+          target="_blank"
+        >
           <FaSteam />
         </a>
-        <a href="http://discordapp.com/users/399486790483968012">
+        <a
+          href="http://discordapp.com/users/399486790483968012"
+          target="_blank"
+        >
           <FaDiscord />
         </a>
       </Socials>

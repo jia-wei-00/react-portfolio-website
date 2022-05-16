@@ -6,6 +6,8 @@ import IMG3 from "../../assets/portfolio3.png";
 import IMG4 from "../../assets/portfolio4.png";
 import IMG5 from "../../assets/portfolio5.png";
 import IMG6 from "../../assets/portfolio6.png";
+import Zoom from "react-reveal/Zoom";
+import Flip from "react-reveal/Flip";
 
 const data = [
   {
@@ -51,33 +53,41 @@ const data = [
 const Portfolio = () => {
   return (
     <section id="portfolio">
-      <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
+      <Flip left>
+        <h5>My Recent Work</h5>
+        <h2>Portfolio</h2>
+      </Flip>
 
       <PortfolioContainer className="container">
-        {data.map((data, index) => {
-          return (
-            <PortfolioItem key={index}>
-              <div>
-                <img src={data.image} alt="" />
-              </div>
-              <h3>{data.title}</h3>
-              {data.password && (
-                <small className="text-light">{data.password}</small>
-              )}
-              <PortfolioItemCta>
-                {data.preview && (
-                  <a href={data.preview} target="_blank" className="btn">
-                    Preview
-                  </a>
+        <Zoom>
+          {data.map((data, index) => {
+            return (
+              <PortfolioItem key={index}>
+                <div>
+                  <img src={data.image} alt="" />
+                </div>
+                <h3>{data.title}</h3>
+                {data.password && (
+                  <small className="text-light">{data.password}</small>
                 )}
-                <a href={data.demo} className="btn btn-primary" target="_blank">
-                  Live Demo
-                </a>
-              </PortfolioItemCta>
-            </PortfolioItem>
-          );
-        })}
+                <PortfolioItemCta>
+                  {data.preview && (
+                    <a href={data.preview} target="_blank" className="btn">
+                      Preview
+                    </a>
+                  )}
+                  <a
+                    href={data.demo}
+                    className="btn btn-primary"
+                    target="_blank"
+                  >
+                    Live Demo
+                  </a>
+                </PortfolioItemCta>
+              </PortfolioItem>
+            );
+          })}
+        </Zoom>
       </PortfolioContainer>
     </section>
   );
@@ -107,6 +117,7 @@ const PortfolioItem = styled.article`
   border-radius: 2rem;
   border: 1px solid transparent;
   transition: var(--transition);
+  min-height: 523px;
 
   &:hover {
     border-color: var(--color-primary-variant);
@@ -120,6 +131,18 @@ const PortfolioItem = styled.article`
   & > :first-child {
     border-radius: 1.5rem;
     overflow: hidden;
+
+    & > img {
+      max-height: 300px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    min-height: 438px;
+  }
+
+  @media screen and (max-width: 600px) {
+    min-height: unset;
   }
 `;
 

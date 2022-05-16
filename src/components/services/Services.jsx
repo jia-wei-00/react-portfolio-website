@@ -1,107 +1,114 @@
 import React from "react";
 import styled from "styled-components";
 import { BiCheck } from "react-icons/bi";
+import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
 
 const Services = () => {
   return (
     <section id="services">
-      <h5>What I Offer</h5>
-      <h2>Services</h2>
+      <Flip left>
+        <h5>What I Offer</h5>
+        <h2>Services</h2>
+      </Flip>
 
       <ServicesContainer className="container">
-        <Service>
-          <ServiceHead>
-            <h3>UI/UX Design</h3>
-          </ServiceHead>
+        <Fade bottom>
+          <Service>
+            <ServiceHead>
+              <h3>UI/UX Design</h3>
+            </ServiceHead>
 
-          <ServiceList>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-          </ServiceList>
-        </Service>
-        {/* END OF UI/UX */}
+            <ServiceList>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+            </ServiceList>
+          </Service>
 
-        <Service>
-          <ServiceHead>
-            <h3>Web Development</h3>
-          </ServiceHead>
+          {/* END OF UI/UX */}
 
-          <ServiceList>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-          </ServiceList>
-        </Service>
-        {/* END OF WEB DEVELOPMENT */}
+          <Service>
+            <ServiceHead>
+              <h3>Web Development</h3>
+            </ServiceHead>
 
-        <Service>
-          <ServiceHead>
-            <h3>Content Creation</h3>
-          </ServiceHead>
+            <ServiceList>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+            </ServiceList>
+          </Service>
+          {/* END OF WEB DEVELOPMENT */}
 
-          <ServiceList>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-            <li>
-              <BiCheck />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </li>
-          </ServiceList>
-        </Service>
-        {/* END OF CONTENT CREATION */}
+          <Service>
+            <ServiceHead>
+              <h3>Content Creation</h3>
+            </ServiceHead>
+
+            <ServiceList>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+              <li>
+                <BiCheck />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </li>
+            </ServiceList>
+          </Service>
+          {/* END OF CONTENT CREATION */}
+        </Fade>
       </ServicesContainer>
     </section>
   );

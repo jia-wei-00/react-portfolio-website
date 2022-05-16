@@ -6,6 +6,8 @@ import { BsWhatsapp } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
 
 const Contact = () => {
   const form = useRef();
@@ -40,49 +42,62 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <h5>Get In Touch</h5>
-      <h2>Contact Me</h2>
+      <Flip left>
+        <h5>Get In Touch</h5>
+        <h2>Contact Me</h2>
+      </Flip>
 
       <ContactContainer className="container">
         <ContactOptions>
-          <ContactOption>
-            <MdOutlineEmail />
-            <h4>Email</h4>
-            <h5>leongjw98@gmail.com</h5>
-            <a href="mailto:leongjw98@gmail.com">Send a message</a>
-          </ContactOption>
-          <ContactOption>
-            <RiMessengerLine />
-            <h4>Messenger</h4>
-            <h5>Jia Wei</h5>
-            <a href="https://m.me/weijia.leong" target="_blank">
-              Send a message
-            </a>
-          </ContactOption>
-          <ContactOption>
-            <BsWhatsapp />
-            <h4>WhatsApp</h4>
-            <h5>017-5570915</h5>
-            <a
-              href="https://api.whatsapp.com/send?phone=60175570915"
-              target="_blank"
-            >
-              Send a message
-            </a>
-          </ContactOption>
+          <Fade left>
+            <ContactOption>
+              <MdOutlineEmail />
+              <h4>Email</h4>
+              <h5>leongjw98@gmail.com</h5>
+              <a href="mailto:leongjw98@gmail.com">Send a message</a>
+            </ContactOption>
+          </Fade>
+          <Fade left delay={100}>
+            <ContactOption>
+              <RiMessengerLine />
+              <h4>Messenger</h4>
+              <h5>Jia Wei</h5>
+              <a href="https://m.me/weijia.leong" target="_blank">
+                Send a message
+              </a>
+            </ContactOption>
+          </Fade>
+          <Fade left delay={200}>
+            <ContactOption>
+              <BsWhatsapp />
+              <h4>WhatsApp</h4>
+              <h5>017-5570915</h5>
+              <a
+                href="https://api.whatsapp.com/send?phone=60175570915"
+                target="_blank"
+              >
+                Send a message
+              </a>
+            </ContactOption>
+          </Fade>
         </ContactOptions>
         {/* END OF CONTACT */}
+
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="name" placeholder="Your Full Name"></input>
-          <input type="email" name="email" placeholder="Your Email"></input>
-          <textarea
-            name="message"
-            row="7"
-            placeholder="Your Message"
-          ></textarea>
-          <button type="submit" className="btn btn-primary">
-            Send Message
-          </button>
+          <Fade right>
+            <input type="text" name="name" placeholder="Your Full Name"></input>
+            <input type="email" name="email" placeholder="Your Email"></input>
+            <textarea
+              name="message"
+              row="7"
+              placeholder="Your Message"
+            ></textarea>
+          </Fade>
+          <Fade right delay={100}>
+            <button type="submit" className="btn btn-primary">
+              Send Message
+            </button>
+          </Fade>
         </form>
       </ContactContainer>
       <ToastContainer theme="dark" />
