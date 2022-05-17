@@ -8,19 +8,39 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import PageNotFound from "./components/404/PageNotFound";
+import {
+  BrowserRouter as Router,
+  Routes as Switch,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 const App = () => {
   return (
     <>
-      <Header />
-      <Nav />
-      <About />
-      <Experience />
-      <Services />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <Router>
+        <Switch>
+          <Route
+            path="/react-portfolio-website"
+            element={
+              <>
+                <Header />
+                <Nav />
+                <About />
+                <Experience />
+                <Services />
+                <Portfolio />
+                <Testimonials />
+                <Contact />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/404" element={<PageNotFound />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />
+        </Switch>
+      </Router>
     </>
   );
 };
